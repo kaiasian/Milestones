@@ -1,0 +1,27 @@
+Yushen Chang
+Andrea Chamorro
+Lucas Laughlin
+Matt Cohen
+Kai Johnson
+
+CSCI 3308 Milestone 4 Resources For Python and Database Script:
+
+
+	Note: The following are resources used to make the script "databasev2.py" and the database "sensorlog.db" for milestone4 
+
+
+	SQLite Sensor Logger Resource:
+		http://raspberrywebserver.com/cgiscripting/rpi-temperature-logger/building-an-sqlite-temperature-logger.html
+
+		Github resource used: The script databasev2.py used some code from this repository to set up the Python script for temperature logger 	    
+			https://github.com/Pyplate/rpi_temp_logger
+		
+	Website User Interface Resource:
+		http://raspberrywebserver.com/cgiscripting/rpi-temperature-logger/building-a-web-user-interface-for-the-temperature-monitor.html
+
+	Instructions used to set up SQL database with Python
+		http://raspberrywebserver.com/sql-databases/accessing-an-sqlite-database-with-python.html
+	
+
+	Google Charts Resource:
+		https://google-developers.appspot.com/chart/interactive/docs/gallery/linechart
