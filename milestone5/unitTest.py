@@ -3,6 +3,10 @@ import sqlite3
 import os	
 import time	
 import glob	
+#from mock import MagicMock
+#from unittest.mock import MagicMock
+import unittest.mock
+import unittest
  #csci3308 milestone 4 script	
 #This script is used on the raspberry pi 3 B+ to get temperature data and store it	
 #in a sql database that is also on the raspberry pi 3 B+.	
@@ -12,7 +16,7 @@ import glob
 #sampling frequency for sensor:	
 sample = (5*60)-1	
 #database object to store at sql path: sensor.db	
-myDatabase = 'sensorlog.db'	
+myDatabase = 'unitTest2.db'	
 #devive file	
 #device_file = '28-00000a3cdc2c'	
 #Function to measure temperature from device file for DS18B20 sensor	
@@ -30,10 +34,10 @@ def storage(temp):
  #display database	
 #Unit Test 1: Test to see if there is valid data in the database, and if not then output an error
 def display():	
-     db_connect = sqlite3.connect(myDatabase)	
+    db_connect = sqlite3.connect(myDatabase)	
     db_cursor = db_connect.cursor()	
      #iterate through contents of db	
-    for row in db_cursor.execute("SELECT * FROM temps"):	
+    for row in db_cursor.execute("SELECT temp FROM temps"):	
         if row == 'None': 	
       # print str(row[0])+""+str(row[1])	
             print("None is read")	
@@ -42,8 +46,8 @@ def display():
             print row	
     	
     db_connect.close()	
- def getData(devicefile):	
-     try:	
+def getData(devicefile):	
+    try:	
         data_object = open(devicefile, 'r')	
         lines = data_object.readlines()	
         data_object.close()	
@@ -88,5 +92,5 @@ def main():
      #show database	
     display()	
     #time.sleep(meausre)	
- if __name__=="__main__":	
+if __name__=="__main__":	
      main()
